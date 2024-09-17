@@ -13,6 +13,7 @@
 }
 
 body {
+	backgroud-color: rgb (255,0,0);
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
@@ -30,11 +31,15 @@ body {
 	/* Margem de todos os lados. */
 	margin: 3px;
 }
-
+h1 {
+	color: red;
+	font-size: 12px;
+	text-align: center;
+}
 /* Formatação comum entre os elementos. */
 header, nav, main, aside, footer {
 	/* Cor do fundo. */
-	background: #a1a1a1;
+	background: #4682B4;
 
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
@@ -43,13 +48,6 @@ header, nav, main, aside, footer {
 
 	/* Margem externa de todos os lados. */
 	margin: 3px;
-}
-
-/* Seletores para formatação individual. */
-
-header {
-	/* Altura do elemento. */
-	height: 100px;
 
 	/* Junção de flex-grow, flex-shrink e flex-basis.  */
 	/* flex-grow – Habilidade de um flex item crescer. */
@@ -58,7 +56,15 @@ header {
 	flex: 1 1 100vw;
 }
 
+/* Seletores para formatação individual. */
+
+header {
+	/* Altura do elemento. */
+	height: 100px;
+}
+
 header #logo {
+	background: #B22222;
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
@@ -71,7 +77,7 @@ header #logo {
 	flex: 0 1 200px;
 
 	/* Cor do fundo. */
-	background: #c9c9c9;
+	background: #3333;
 
 	/* Alinha os itens na vertical. */
 	justify-content: center;
@@ -105,59 +111,43 @@ header #logo {
 }
 
 nav {
+	background: #1E90FF;
 	/* Alinha os itens na vertical. */
 	justify-content: center;
 
 	/* Alinha os itens na horizontal. */
 	align-items: center;
 
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100%;
-
 	/* Altura do elemento. */
 	height: 100px;
+
+	background: #1E90FF;
 }
 
 nav a {
 	/* Margem de todos os lados. */
-	margin: 0 3%;
-
-	/* Tamanho da fonte. */
+	margin: 3%;
 	font-size: 15pt;
+	
 }
 
 main {
+	background: #006400;
 	/* Realizar a subtração de 100% da altura vertical menos a soma    */
-	/* da altura dos elementos ( 300px ) com as suas margens ( 30px ). */
-	height: calc(100vh - 330px);
-
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 20 1 500px;
+	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
+	height: calc(100vh - 436px);
 }
 
 aside {
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 200px;
+	background: #B0C4DE;
+	/* Altura do elemento. */
+	height: 100px;
 }
 
 footer {
+	background: #FF1493;
 	/* Altura do elemento. */
 	height: 100px;
-
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100vw;
 }
 
 a {
@@ -197,6 +187,9 @@ a {
 		/* Torna a posição do elemento fixa. */
 		position: fixed;
 
+		/* Dispõe os itens em coluna. */
+		flex-direction: column;
+
 		/* Ocupa 100% da largura da tela de exibição. */
 		width: 100vw;
 
@@ -206,14 +199,11 @@ a {
 		/* Cor em RGB, mais transparência. */
 		background: rgba(255, 255, 255, 0.8);
 
-		/* Dispõe os itens em coluna. */
-		flex-direction: column;
+		/* Alinha os itens na vertical. */
+		justify-content: center;
 
 		/* Alinha os itens na horizontal. */
 		align-items: center;
-
-		/* Alinha os itens na vertical. */
-		justify-content: center;
 
 		/* Remove a margem externa de todos os lados do elemento. */
 		margin: 0;
@@ -228,12 +218,9 @@ a {
 		transition: 0.3s;
 	}
 
-	nav a {
-		/* Margem de todos os lados. */
-		margin: 3%;
-	}
-
-	aside {
-		height: 100px;
+	main {
+		/* Realizar a subtração de 100% da altura vertical menos a soma    */
+		/* da altura dos elementos ( 300px ) com as suas margens ( 30px ). */
+		height: calc(100vh - 330px);
 	}
 }
